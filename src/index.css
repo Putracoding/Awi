@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter", sans-serif;
+  
+  --color-brand-bg: #fcfcfc;
+  --color-brand-ink: #1a1a1a;
+  --color-brand-accent: #1a1a1a;
+  --color-brand-muted: #666666;
+  --color-brand-line: #e5e5e5;
+  --color-brand-surface: #ffffff;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-brand-ink font-sans antialiased selection:bg-brand-ink selection:text-white;
+  }
+}
+
+@layer components {
+  .geo-border-b {
+    @apply border-b border-brand-line;
+  }
+  .geo-border-r {
+    @apply border-r border-brand-line;
+  }
+  .pill-tag {
+    @apply border border-brand-ink rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-widest bg-transparent transition-all;
+  }
+}
